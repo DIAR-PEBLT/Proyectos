@@ -128,6 +128,13 @@ var Urinsaya = L.marker([-14.269265, -69.986970], {
         title: "CREACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO ACORA - TOTORANI",
     }).bindPopup("<h2> <center>CREACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO ACORA - TOTORANI EN EL CENTRO POBLADO DE AGUAS CALIENTES DEL DISTRITO DE ACORA - PROVINCIA DE PUNO - DEPARTAMENTO DE PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>Código de Idea</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>104912</td> <td class='tg-wd1d'>164,825,615.00</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>Acora - Puno - Puno</td> <td class='tg-wd1d'>ND</td> </tr> </tbody> </table> ", {
         maxWidth: "auto"
+    }),
+    conavire = L.marker([-15.860447, -70.411807], {
+        icon: marcador_Verde,
+        draggable: false,
+        title: "MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO CONAVIRE, CAHUALLA Y CARI CARI",
+    }).bindPopup("<h2> <center>MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO CONAVIRE, CAHUALLA Y CARI CARI DEL DISTRITO DE MAÑAZO - PROVINCIA DE PUNO - DEPARTAMENTO DE PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>Código de Idea</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>29547</td> <td class='tg-wd1d'>29,000,000.00</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>Mañazo - Puno - Puno</td> <td class='tg-wd1d'>ND</td> </tr> </tbody> </table> ", {
+        maxWidth: "auto"
     });
 
 //Agrupando los Marcadores de Tipo Proyecto
@@ -138,7 +145,7 @@ var Estudio = L.layerGroup([Viluyo_lara, paylla_mira, Kcatawi, sur_paylla]);
 
 // Agrpando los Marcadores de Tipo Idea de Proyecto
 
-var Idea = L.layerGroup([asillo, acora_totorani]);
+var Idea = L.layerGroup([asillo, acora_totorani, conavire]);
 
 //Agregando los grupos de Capas al Mapa
 var map = L.map('map', {
