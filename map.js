@@ -34,6 +34,18 @@ var marcador_Amarillo = L.icon({
     //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
+var marcador_Verde = L.icon({
+    iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+    iconSize: [30, 50], // size of the icon
+    //shadowSize: [50, 64], // size of the shadow
+    //iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62], // the same for the shadow
+    //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+
+
+
 // Varios Mapas Base 
 var Google = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { foo: 'bar', attribution: '&copy; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>' }),
     OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }),
@@ -102,10 +114,21 @@ var Urinsaya = L.marker([-14.269265, -69.986970], {
         title: "MEJORAMIENTO DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO SUR PAYLLA EN LA COMUNIDAD DE SUR PAYLLA",
     }).bindPopup("<h2> <center>MEJORAMIENTO DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO SUR PAYLLA EN LA COMUNIDAD DE SUR PAYLLA, DISTRITO DE UMACHIRI - PROVINCIA DE MELGAR - DEPARTAMENTO DE PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>SNIP</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>2307157</td> <td class='tg-wd1d'>506,106.00</td> <td class='tg-wd1d'>100%</td> <td class='tg-wd1d'>Expediente Tecnico</td> <td class='tg-wd1d'>72</td> <td class='tg-wd1d'>116 productores</td> <td class='tg-wd1d'>Umachiri - Melgar - Puno</td> <td class='tg-wd1d'><a href='https://ofi5.mef.gob.pe/invierte/formato/verProyecto/19218'target='blank'>Click Aqui</a><br></td> </tr> </tbody> </table>  ", {
         maxWidth: "auto"
-    })
-
-
-;
+    }),
+    asillo = L.marker([-14.686137, -70.376118], {
+        icon: marcador_Verde,
+        draggable: false,
+        title: "MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO ASILLO - PROGRESO",
+    }).bindPopup("<h2> <center>MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO ASILLO - PROGRESO  DISTRITO DE ASILLO - PROVINCIA DE AZANGARO - DEPARTAMENTO DE PUNO, DISTRITO DE UMACHIRI - PROVINCIA DE MELGAR - DEPARTAMENTO DE PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>Código de Idea</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>100293</td> <td class='tg-wd1d'>110,217,872.44</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>Asillo - Azangaro - Puno</td> <td class='tg-wd1d'> ND<br></td> </tr> </tbody> </table> ", {
+        maxWidth: "auto"
+    }),
+    acora_totorani = L.marker([-16.075038, -69.902106], {
+        icon: marcador_Verde,
+        draggable: false,
+        title: "CREACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO ACORA - TOTORANI",
+    }).bindPopup("<h2> <center>CREACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO ACORA - TOTORANI EN EL CENTRO POBLADO DE AGUAS CALIENTES DEL DISTRITO DE ACORA - PROVINCIA DE PUNO - DEPARTAMENTO DE PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>Código de Idea</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>104912</td> <td class='tg-wd1d'>164,825,615.00</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>ND</td> <td class='tg-wd1d'>Acora - Puno - Puno</td> <td class='tg-wd1d'>ND</td> </tr> </tbody> </table> ", {
+        maxWidth: "auto"
+    });
 
 //Agrupando los Marcadores de Tipo Proyecto
 var Proyectos = L.layerGroup([Urinsaya, huancarani, sucre, llallimayo, jilas]);
@@ -113,11 +136,15 @@ var Proyectos = L.layerGroup([Urinsaya, huancarani, sucre, llallimayo, jilas]);
 //Agrupando los Marcadores de Tipo Estudio
 var Estudio = L.layerGroup([Viluyo_lara, paylla_mira, Kcatawi, sur_paylla]);
 
+// Agrpando los Marcadores de Tipo Idea de Proyecto
+
+var Idea = L.layerGroup([asillo, acora_totorani]);
+
 //Agregando los grupos de Capas al Mapa
 var map = L.map('map', {
     center: [-15.488396, -70.167500],
     zoom: 8,
-    layers: [Google, Proyectos, Estudio]
+    layers: [Google, Proyectos, Estudio, Idea]
 });
 
 // Agrupando los Mapas Base
@@ -130,7 +157,8 @@ var baseMaps = {
 // Creando Capas de Marcadores
 var Capas = {
     "Proyectos de Inversión": Proyectos,
-    "Estudios": Estudio
+    "Estudios": Estudio,
+    "Idea de Proyecto": Idea
 };
 
 
