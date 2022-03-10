@@ -235,11 +235,13 @@ var baseMaps = {
     "Dark": CartoDB_DarkMatter
 };
 
+'<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" width="400" height="341"/> Sectores de Riego'
+
 // Creando Capas de Marcadores
 var Capas = {
-    "Proyectos de Inversión": Proyectos,
-    "Estudios": Estudio,
-    "Idea de Proyecto": Idea
+    '<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" width="10" height="15"/> Proyectos de Inversión': Proyectos,
+    '<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png" width="10" height="15"/> Estudios': Estudio,
+    '<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png" width="10" height="15"/> Idea de Proyecto': Idea,
 };
 
 
