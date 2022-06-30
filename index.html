@@ -77,12 +77,14 @@
                         <br>
                         <button id="Jilas">Jilas San Geronimo</button> <br>
                         <br>
+                        <button id="Vilar">Sistema de Riego Viluyo-Laraqueri</button> <br>
+                        <br>
                         <button id="stop">Detener Vuelo</button>
                     </div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <label>Control de capas</label>
+                                <label>Control de Capas</label>
                                 <div id="out-control"></div>
                             </div>
                         </div>
@@ -91,6 +93,7 @@
                     <script type="text/javascript">
                         var payllam = [-14.944237, -70.873373];
                         var JilasS = [-14.674447, -70.362794];
+                        var Vilula = [-16.176941, -70.090705];
 
 
                         document.getElementById('paylla').onclick = function() {
@@ -98,6 +101,9 @@
                         };
                         document.getElementById('Jilas').onclick = function() {
                             map.flyTo(JilasS, 18);
+                        };
+                        document.getElementById('Vilar').onclick = function() {
+                            map.flyTo(Vilula, 18);
                         };
                         document.getElementById('stop').onclick = function() {
                             map.stop();
@@ -218,21 +224,21 @@
                 icon: marcador_rojo,
                 draggable: false,
                 title: "MEJORAMIENTO DE LOS SERVICIOS DE PROTECCION DE LAS RIVERAS DEL RIO CRUCERO EN JILA SAN GERNOMINO, JILA CENTRAL, JILA HUANCASAYANI Y SANTA CRUZ DE MACHARIRI",
-            }).bindPopup("<h2> <center>MEJORAMIENTO DE LOS SERVICIOS DE PROTECCION DE LAS RIVERAS DEL RIO CRUCERO EN JILA SAN GERNOMINO, JILA CENTRAL, JILA HUANCASAYANI Y SANTA CRUZ DE MACHARIRI, DISTRITO DE ASILLO - AZANGARO - PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>SNIP</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>2267881</td> <td class='tg-wd1d'>4,788,431.14</td> <td class='tg-wd1d'>60.85%</td> <td class='tg-wd1d'>Ejecución</td> <td class='tg-wd1d'>180</td> <td class='tg-wd1d'>224 productores</td> <td class='tg-wd1d'>Llalli - Melgar - Puno</td> <td class='tg-wd1d'><a href='https://ofi5.mef.gob.pe/invierte/formato/verFichaSNIP/318531/0/0'target='blank'>Click Aqui</a><br></td> </tr> </tbody> </table>", {
+            }).bindPopup("<h4> <center>MEJORAMIENTO DE LOS SERVICIOS DE PROTECCION DE LAS RIVERAS DEL RIO CRUCERO EN JILA SAN GERNOMINO, JILA CENTRAL, JILA HUANCASAYANI Y SANTA CRUZ DE MACHARIRI, DISTRITO DE ASILLO - AZANGARO - PUNO</center></h4><table class='table table-active table-bordered'> <thead class='table-dark'> <tr> <th>SNIP</th> <th>Presupuesto</th> <th>Avance Fisico</th> <th>Estado</th> <th>Plazo de Ejecución</th> <th>N. Beneficiarios</th> <th>Ubicación</th> <th>mas Detalle</th> </tr> </thead> <tbody> <tr> <td>2223318</td> <td>4,788,431.14</td> <td>60.85%</td> <td>Ejecución</td> <td>180 dias</td> <td>224 productores</td> <td>Asillo - Azangaro - Puno</td> <td><a href='https://ofi5.mef.gob.pe/invierte/formato/verFichaSNIP/234193/0/0'target='blank'>Click Aqui</a></td> </tr> </tbody> </table>", {
                 maxWidth: "auto"
             }),
             Viluyo_lara = L.marker([-16.176941, -70.090705], {
                 icon: marcador_Amarillo,
                 draggable: false,
                 title: "CREACION Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO VILUYO-LARAQUERI",
-            }).bindPopup("<h2> <center>CREACION Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO VILUYO-LARAQUERI - DISTRITO PICHACANI, PROVINCIA PUNO, REGION PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>SNIP</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>2314455</td> <td class='tg-wd1d'>3,343,244.00</td> <td class='tg-wd1d'>100%</td> <td class='tg-wd1d'>Expediente Tecnico</td> <td class='tg-wd1d'>180</td> <td class='tg-wd1d'>7238 productores</td> <td class='tg-wd1d'>Pichacani - Puno - Puno</td> <td class='tg-wd1d'><a href='https://ofi5.mef.gob.pe/invierte/formato/verFichaSNIP/76828/0/0'target='blank'>Click Aqui</a><br></td> </tr> </tbody> </table> ", {
+            }).bindPopup("<h3> <center>CREACION Y AMPLIACION DEL SERVICIO DE AGUA PARA EL SISTEMA DE RIEGO VILUYO-LARAQUERI - DISTRITO PICHACANI, PROVINCIA PUNO, REGION PUNO</center></h3> <table class='table table-active table-bordered'> <thead class='table-dark'> <tr> <th>SNIP</th> <th>Presupuesto</th> <th>Avance Fisico</th> <th>Estado</th> <th>Plazo de Ejecución</th> <th>N. Beneficiarios</th> <th>Ubicación</th> <th>mas Detalle</th> </tr> </thead> <tbody> <tr> <td>2314455</td> <td>3,343,244.00</td> <td>100%</td> <td>Expediente ténico con observaciones - Estudio de Impacto Ambiental, entre otros </td> <td>180 dias</td> <td>7238 productores</td> <td>Pichacani - Puno - Puno</td> <td><a href='https://ofi5.mef.gob.pe/invierte/formato/verFichaSNIP/76828/0/0'target='blank'>Click Aqui</a></td> </tr> </tbody> </table>  ", {
                 maxWidth: "auto"
             }),
             paylla_mira = L.marker([-14.944237, -70.873373], {
                 icon: marcador_Amarillo,
                 draggable: false,
                 title: "MEJORAMIENTO DEL SERVICIO DE AGUA PARA RIEGO EN LOS SECTORES CENTRO PAYLLA Y MIRAFLORES",
-            }).bindPopup("<h2> <center>MEJORAMIENTO DEL SERVICIO DE AGUA PARA RIEGO EN LOS SECTORES CENTRO PAYLLA Y MIRAFLORES DEL DISTRITO DE UMACHIRI - PROVINCIA DE MELGAR - DEPARTAMENTO DE PUNO</center></h2><table class='tg'> <thead> <tr> <th class='tg-n533'>SNIP</th> <th class='tg-n533'>Presupuesto</th> <th class='tg-n533'>Avance Fisico</th> <th class='tg-n533'>Estado</th> <th class='tg-n533'>Plazo de Ejecución (Días)</th> <th class='tg-n533'>N. Beneficiarios</th> <th class='tg-f0bj'>Ubicación</th> <th class='tg-n533'>Mas Detalle</th> </tr> </thead> <tbody> <tr> <td class='tg-wd1d'>2342780</td> <td class='tg-wd1d'>1,016,444.00</td> <td class='tg-wd1d'>100%</td> <td class='tg-wd1d'>Expediente Tecnico Observado</td> <td class='tg-wd1d'>135</td> <td class='tg-wd1d'>239 productores</td> <td class='tg-wd1d'>Umachiri - Melgar - Puno</td> <td class='tg-wd1d'><a href='https://ofi5.mef.gob.pe/invierte/formato/verProyecto/82723'target='blank'>Click Aqui</a><br></td> </tr> </tbody> </table> ", {
+            }).bindPopup("<h3> <center>MEJORAMIENTO DEL SERVICIO DE AGUA PARA RIEGO EN LOS SECTORES CENTRO PAYLLA Y MIRAFLORES DEL DISTRITO DE UMACHIRI - PROVINCIA DE MELGAR - DEPARTAMENTO DE PUNO</center></h3> <table class='table table-active table-bordered'> <thead class='table-dark'> <tr> <th>SNIP</th> <th>Presupuesto</th> <th>Avance Fisico</th> <th>Estado</th> <th>Plazo de Ejecución</th> <th>N. Beneficiarios</th> <th>Ubicación</th> <th>mas Detalle</th> </tr> </thead> <tbody> <tr> <td>2342780</td> <td>1,016,444.00</td> <td>100%</td> <td>Expediente Tecnico Observado</td> <td>135</td> <td>239 productores</td> <td>Umachiri - Melgar - Puno</td> <td><a href='https://ofi5.mef.gob.pe/invierte/formato/verProyecto/82723'target='blank'>Click Aqui</a></td> </tr> </tbody> </table> ", {
                 maxWidth: "auto"
             }),
             Kcatawi = L.marker([-14.931156, -70.852839], {
