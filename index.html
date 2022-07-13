@@ -118,19 +118,21 @@
 				});
 		
 	//*****************MAPA BASE*******************************//
-	// OPEN sTREET MAP
+		// OPEN STREET MAP
 	var osm = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
         });
+		// TOPOGRAFICO DE ESRI
 	var Topografico = new L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{
 		   maxZoom:19,}).addTo(map);
-
+		// CARTOGRAFIA OSCURA
 	var CartoDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png');	   
-		   
+		// GOOGLE SATELITE DE GOOGLE
 	var google = new L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',{
 			maxZoom:22,
 			});
 			
+	//*****************  ATRIBUIONES DE MAPAS Y FUENTES DE DATOS*******************************//	
 	map.attributionControl.setPrefix('<a href="#" target="_blank">DIAR</a> &middot; <a href="#" title="Proyecto Especial Binacional Lago Titicaca">PEBLT</a>');
 	
 		
