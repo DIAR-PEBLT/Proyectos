@@ -66,22 +66,6 @@
               <h3 class="panel-title">Opciones de Busqueda
               <button type="button" class="btn btn-xs btn-default pull-right" id="sidebar-hide-btn"><i class="fa fa-chevron-left"></i></button></h3>
             </div>
-            <div class="panel-body" style="height: 120px;">
-              <div class="row">
-                <div class="col-md-12">
-					<label>Búsca Aquí:</label>
-				  <div class="form-control search" id="findbox"></div>
-                </div>
-              </div>
-            </div>
-			<div class="panel-body">
-              <div class="row">
-                <div class="col-md-12">
-				<label>Control de capas:</label>
-				  <div id="out-control"></div>
-                </div>
-              </div>
-            </div>
 			<div class="panel-body">
               <div class="row">
                 <div class="col-md-12">
@@ -98,6 +82,23 @@
                 </div>
               </div>
             </div>
+            <div class="panel-body" style="height: 120px;">
+              <div class="row">
+                <div class="col-md-12">
+					<label>Búsca Aquí:</label>
+				  <div class="form-control search" id="findbox"></div>
+                </div>
+              </div>
+            </div>
+			<div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+				<label>Control de capas:</label>
+				  <div id="out-control"></div>
+                </div>
+              </div>
+            </div>
+			
           </div>
         </div>
       </div>
@@ -118,20 +119,21 @@
 		
 	//*****************MAPA BASE*******************************//
 	// OPEN sTREET MAP
-	//var osm = new L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		//	maxZoom: 22,
-        //}).addTo(map);
+	var osm = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+        });
+	var Topografico = new L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{
+		   maxZoom:19,}).addTo(map);
+
+	var CartoDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png');	   
+		   
 	var google = new L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',{
 			maxZoom:22,
-			}).addTo(map);
+			});
+			
+	map.attributionControl.setPrefix('<a href="#" target="_blank">DIAR</a> &middot; <a href="#" title="Proyecto Especial Binacional Lago Titicaca">PEBLT</a>');
 	
-	//var imagenUrl = 'images/pucallpa.jpg';
-    //var limiteImagen = [[-8.39482069015506,-74.58179622888], [-8.38238060474396,-74.5563232898711]];
-	
-	//var imagenSatelital=L.imageOverlay(imagenUrl, limiteImagen, {
-		//opacity:0.5, 
-		//attribution:'CIUDAD DE PUCALLPA'});
-	
+		
 	//BARRA DE ZOOM
 	var barraZoom = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
 	
@@ -256,12 +258,16 @@
 
 		//DECLARAMOS UNA VARIABLE PARA EL CONTROL DE LOS MAPAS BASE//
 		var mapasBase = {
-			"google": google,
+			"Google Satelite": google,
+			"Open Street Map": osm,
+			"Topográfico": Topografico,
+			"Cartografía Oscura": CartoDark
+			
 		};
 			
 		//DECLARAMOS UNA VARIABLE PARA EL CONTROL DE LAS CAPAS DE NUESTRO MAPA			
 		var capas= {
-			"Proyectos PEBLT<br> gg": proyectospeblt
+			"Proyectos PEBLT<br> <br> <img src='images/proyectospeblt_0_ProtectodeInversión0.png' <p> Proyectos y Obras</p/><img src='images/proyectospeblt_0_Estudio1.png' <p> Estudios</p/> <img src='images/proyectospeblt_0_IdeadeProyecto2.png' <p> Idea de Proyecto</p/>": proyectospeblt
 			
 		};
 
