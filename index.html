@@ -251,17 +251,7 @@
 				};			
 				
 		
-		function onEachFeature(feature, layer) {
-			if (feature.properties && feature.properties.Categoria) {
-			layer.bindPopup(feature.properties.Categoria);
-			}
-		layer.on({
-      "click" : function(){
-		document.getElementById("mitexto").innerHTML = feature.properties.Nombre;       
-		}
-		}
-		)
-	}
+	
 		var featuresLayer = L.geoJSON(datosGeojson, {
 				pointToLayer: function (feature, latlng) {
 					return L.circleMarker(latlng, MarkerOptions);
@@ -270,7 +260,7 @@
 					onEachFeature: popup_sitios
 					});
 			
-			proyectospeblt.addLayer(featuresLayer);
+		proyectospeblt.addLayer(featuresLayer);
 			
 		function estiloSelect() {
 		var miSelect = document.getElementById("categoria").value;
